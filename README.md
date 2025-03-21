@@ -35,3 +35,13 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+Rotation Selection	Dropdown Selection	Password Length	Acknowledge Checkbox
+Rotate Now	20Char or 30Char	Any length	❌ Hidden
+Don't Rotate	20Char	Empty	❌ Hidden
+Don't Rotate	20Char	Less than 12	✅ Shown
+Don't Rotate	20Char	12 or more	❌ Hidden
+Don't Rotate	30Char	Empty	❌ Hidden
+Don't Rotate	30Char	Less than 30	✅ Shown
+Don't Rotate	30Char	30 or more	❌ Hidden
+
