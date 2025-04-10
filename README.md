@@ -36,3 +36,111 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
+AI Integration Vision with AWS Bedrock
+What We Want AI to Do (Next Step)
+Current Gap: While automation exists, failure resolution, legacy code refactoring, and optimal dependency suggestions are still manual.
+
+AI Vision:
+
+Use AWS Bedrock to analyze test failures and suggest fixes.
+
+Automatically recommend the safest upgrade path using semantic code understanding.
+
+Generate PR-ready code for deprecated APIs and breaking changes.
+
+Learn from historical upgrades across repos to improve accuracy over time.
+
+Fit in the Process
+Will integrate post-dependency upgrade phase:
+
+AI will intervene when scripts fail or break builds.
+
+GitLab pipeline (upcoming migration) will invoke Bedrock agents for dynamic fixes and recommendations.
+
+Tools
+Current: Jenkins, Maven/Gradle, Prisma, Jira, SonarQube.
+
+Planned: GitLab CI/CD, AWS Bedrock, custom AI agents.
+
+Would you like me to convert this into a styled .pptx with subtle animations as well?
+
+
+
+
+
+
+
+You said:
+Add few more information to second slide like POC and steps can be fit into process. 
+
+
+ChatGPT said:
+Great! Here's an updated Slide 2 with added information about the AI PoC, integration steps, and how it fits into the pipeline process:
+
+Slide 2: AI Integration Vision with AWS Bedrock
+What We Want AI to Do (Next Step)
+Current Gap: Automation handles standard upgrades but struggles with:
+
+Failures due to deprecated APIs or breaking changes.
+
+Legacy code incompatibilities.
+
+Choosing the best upgrade version based on compatibility.
+
+AI Vision with AWS Bedrock:
+
+Leverage generative AI to:
+
+Analyze failed builds/test logs and suggest fixes.
+
+Recommend optimal versions for dependencies based on upgrade success likelihood.
+
+Refactor code snippets where APIs have changed.
+
+Draft commit messages, PR descriptions, and update documentation.
+
+Proof of Concept (PoC) Plan
+Use a subset of microservices (e.g., ATM API & Audit Logger) for pilot.
+
+Identify common failure patterns from past upgrade logs.
+
+Train Bedrock agents to suggest fixes and validate them via automated tests.
+
+Integration Steps
+Upgrade Failure Detection:
+
+Jenkins/GitLab detects test failures post dependency upgrade.
+
+Trigger AI Agent (Bedrock):
+
+Logs and project context passed to AI.
+
+Fix Suggestions:
+
+AI proposes code changes, upgrade path, or test refactoring.
+
+Validation:
+
+Changes tested automatically.
+
+PR Generation:
+
+If success, raise a PR with AI-generated summary.
+
+Fit in the Current Process
+Before: Human intervention after pipeline failure.
+
+Now with AI:
+
+AI intervenes before human involvement.
+
+AI reduces delay between detection and fix.
+
+Improves speed, consistency, and learning over time.
+
+Tools Involved
+CI/CD: GitLab (future), Jenkins (current).
+
+AI: AWS Bedrock for natural language and code intelligence.
+
+Supporting: Jira, SonarQube, Prisma, Maven/Gradle, Snyk (optional).
